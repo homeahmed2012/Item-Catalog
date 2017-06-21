@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Add item{% endblock %}
+{% block content %}
+    <h2>Add Item</h2>
+    <form method="post">
+        <label for="title">Title</label><br>
+        <input type="text" name="title"><br>
+        <label for="description">Description</label><br>
+        <input type="text" name="description" height="100px"><br>
+        <select name="catalog_id">
+            {% for cat in cats %}
+            <option value="{{ cat.id }}">{{ cat.name }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <input type="submit">
+    </form>
+{% endblock %}

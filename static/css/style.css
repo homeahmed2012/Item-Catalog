@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    background-color: #616161;
+}
+.title_bar {
+    background-color: #1C1C1C;
+    color: white;
+    height: 60px;
+}
+#page_name {
+    float: left;
+    margin-top: 10px;
+}
+#login {
+    float: right;
+}
+        
+.box {
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cont {
+    background-color: #D7D7D7;
+    height: 100%;
+    padding-top: 20px;
+}
+
+#login {
+    margin-top: 5px;
+}

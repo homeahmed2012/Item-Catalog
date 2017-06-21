@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Catalogs{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-md-3 box">
+        <h2>Categories</h2>
+        <ul>
+        {% for cat in cats %}
+            <li><a href="/catalog/{{  cat.name }}/items">{{ cat.name }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="col-md-8 box">
+        <h2>{{ catalog_name ~ ' (' ~ items.count() ~ ' items)' }}</h2>
+        <ul>
+        {% for item in items %}
+            <li><a href="{{ url_for('showItem',catalog_name=catalog_name, item_name=item.name) }}">
+                {{ item.name }}
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock %}
